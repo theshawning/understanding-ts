@@ -1,13 +1,13 @@
 // unknown is useful if you are not sure of the type of a given variable
 // will need extra type checks in your code to work with properly, though
 let userInput: unknown;
-let userName: string
+let userName1: string
 
 userInput = 5;
 userInput = 'Shawn';
 
 if (typeof userInput === 'string') {
-  userName = userInput;
+  userName1 = userInput;
 }
 
 // lets you know this function will never return anything and will break your script
