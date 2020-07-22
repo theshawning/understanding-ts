@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/theshawning/understanding-ts#readme",
   "devDependencies": {
+    "@types/node": "^14.0.24",
     "lite-server": "^2.5.4"
   }
 }
