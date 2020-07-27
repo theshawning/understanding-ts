@@ -61,3 +61,9 @@ function moveAnimal(animal) {
     console.log('Moving at speed: ' + speed);
 }
 moveAnimal({ type: 'bird', flyingSpeed: 10 });
+// Type Casting 
+var userInputElement = document.getElementById('user-input');
+if (userInputElement) {
+    userInputElement.value = 'Howdy!';
+}
+// Index Properties

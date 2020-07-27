@@ -79,7 +79,6 @@ useVehicle(v1);
 useVehicle(v2);
 
 
-
 // Discriminated Union
 
 interface Bird {
@@ -107,3 +106,16 @@ function moveAnimal(animal: Animal) {
 }
 
 moveAnimal({ type: 'bird', flyingSpeed: 10 })
+
+
+// Type Casting 
+
+const userInputElement = document.getElementById('user-input');
+
+if (userInputElement) {
+  (userInputElement as HTMLInputElement).value = 'Howdy!'
+}
+
+
+// Index Properties
+
