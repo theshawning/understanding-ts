@@ -1,4 +1,5 @@
 // Intersection Types
+var _a;
 var e1 = {
     name: 'Shawn',
     privileges: ['create-server'],
@@ -10,6 +11,7 @@ function add(a, b) {
     }
     return a + b;
 }
+var result = add('Shawn', 'Harrison');
 function printEmployeeInfo(emp) {
     console.log('Name: ' + emp.name);
     if ('privileges' in emp) {
@@ -66,4 +68,17 @@ var userInputElement = document.getElementById('user-input');
 if (userInputElement) {
     userInputElement.value = 'Howdy!';
 }
-// Index Properties
+var errorBag = {
+    email: 'Not a valid email.'
+};
+// Optional Chaining
+var fetchedUserData = {
+    id: 'u1',
+    name: 'Max',
+    job: {
+        title: 'CEO',
+        description: 'My own company'
+    }
+};
+console.log((_a = fetchedUserData === null || fetchedUserData === void 0 ? void 0 : fetchedUserData.job) === null || _a === void 0 ? void 0 : _a.title);
+// avoid runtime errors with optional chaining when retrieving data from a server when you are not sure if a nested dataset will be present or not

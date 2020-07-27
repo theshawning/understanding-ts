@@ -19,19 +19,23 @@ const e1: ElevatedEmployee = {
 }
 
 
-// Type Guards
+// Type Guards + Function Overloads
 
 type Combineable = string | number;
 type Numeric = number | boolean;
 
 type Universal = Combineable & Numeric;
 
+function add(a: number, b: number): number;
+function add(a: string, b: string): string;
 function add(a: Combineable, b: Combineable) {
   if (typeof a === 'string' || typeof b === 'string') {
     return a.toString() + b.toString();
   }
   return a + b;
 }
+
+const result = add('Shawn', 'Harrison');
 
 type UnknownEmployee = Employee | Admin;
 
@@ -119,3 +123,26 @@ if (userInputElement) {
 
 // Index Properties
 
+interface ErrorContainer {
+  [key: string]: string;
+}
+
+const errorBag: ErrorContainer = {
+  email: 'Not a valid email.'
+}
+
+
+// Optional Chaining
+
+const fetchedUserData = {
+  id: 'u1',
+  name: 'Max',
+  job: {
+    title: 'CEO',
+    description: 'My own company'
+  }
+}
+
+console.log(fetchedUserData?.job?.title);
+
+// avoid runtime errors with optional chaining when retrieving data from a server when you are not sure if a nested dataset will be present or not
